@@ -1,0 +1,1 @@
+In this project I'll be creating and sketchpad, like and Etch-a-Sketch, using javascript and grids.
