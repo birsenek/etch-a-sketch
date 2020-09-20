@@ -1,19 +1,26 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
 }
 
 .sketch {
     display: grid;
     grid-template-columns: repeat(16, auto);
-    width: 600px;
-    height: 600px;
+    width: 520px;
+    height: 520px;
     border: solid #000000;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
@@ -29,11 +36,24 @@ body {
 
 .cls {
     margin-bottom: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    outline: none;
+}
+
+span {
+    font-size: 1.5em;
 }
 
 @media (max-width: 360px) {
     .content {
         height: 400px;
+    }
+    .menu {
+        width: 50vh;
     }
     .sketch {
         width: 350px;

@@ -19,15 +19,16 @@ sketch.addEventListener('touchmove', e => {
     isDrawing = true
     let touch = e.touches[0];
     const square = document.elementFromPoint(touch.clientX, touch.clientY)
-    console.log(touch.clientY)
     if(touch.clientY > 167 && touch.clientY < 500 && touch.clientX > 6 && touch.clientX < 350) {
-        square.style.background = 'red'
+        const squareColor = document.getElementById('squareColor').value
+        square.style.background = squareColor
     }
 })
 
 const draw = (e) => {
     if (isDrawing === true) {
-        e.target.style.background = 'red'
+        const squareColor = document.getElementById('squareColor').value
+        e.target.style.background = squareColor
     }
 }
 sketch.addEventListener('mousemove', draw)
