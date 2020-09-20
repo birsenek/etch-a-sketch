@@ -15,11 +15,22 @@ sketch.addEventListener('mousedown', e => {
     isDrawing == false ? isDrawing = true : isDrawing = false
 })
 
+sketch.addEventListener('touchstart', e => {
+    isDrawing = true
+    let touch = e.touches[0];
+    const square = document.elementFromPoint(touch.clientX, touch.clientY)
+    if(touch.clientY > 167 && touch.clientY < 550 && touch.clientX > 6 && touch.clientX < 350) {
+        const squareColor = document.getElementById('squareColor').value
+        square.style.background = squareColor
+    }
+})
+
 sketch.addEventListener('touchmove', e => {
     isDrawing = true
     let touch = e.touches[0];
     const square = document.elementFromPoint(touch.clientX, touch.clientY)
-    if(touch.clientY > 167 && touch.clientY < 500 && touch.clientX > 6 && touch.clientX < 350) {
+    console.log(touch.clientY)
+    if(touch.clientY > 215 && touch.clientY < 550 && touch.clientX > 6 && touch.clientX < 350) {
         const squareColor = document.getElementById('squareColor').value
         square.style.background = squareColor
     }
