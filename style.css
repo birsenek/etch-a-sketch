@@ -48,6 +48,14 @@ span {
     font-size: 1.5em;
 }
 
+#grid-size {
+    font-size: 1.5em;
+}
+
+#grid {
+    font-size: 1em
+}
+
 @media (max-width: 360px) {
     .content {
         height: 400px;
@@ -58,5 +66,8 @@ span {
     .sketch {
         width: 350px;
         height: 350px;
+    }
+    #grid-size {
+        display: none;
     }
 }
