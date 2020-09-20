@@ -31,4 +31,13 @@ const draw = (e) => {
         e.target.style.background = 'red'
     }
 }
-sketch.addEventListener('mouseout', draw)     
+sketch.addEventListener('mouseout', draw)
+
+const clearScreenButton = document.querySelector('.cls')
+
+clearScreenButton.addEventListener('click', e => {
+    const squares = document.querySelectorAll('.square').forEach(square => {
+        square.style.background = 'white'
+        isDrawing = false
+    })
+})

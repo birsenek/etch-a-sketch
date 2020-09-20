@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 .sketch {
@@ -24,4 +25,8 @@ body {
 
 .square:hover {
     background-color: #000000;
+}
+
+.cls {
+    margin-bottom: 20px;
 }
