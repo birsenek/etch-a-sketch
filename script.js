@@ -9,14 +9,26 @@ const createSquares = _ => {
 }
 createSquares()
 
-
 let isDrawing = false
 sketch.addEventListener('mousedown', e => {
     isDrawing == false ? isDrawing = true : isDrawing = false
 })
 
-sketch.addEventListener('mouseover', e => {
+sketch.addEventListener('touchstart', e => {
+    e.preventDefault()
+    isDrawing == false ? isDrawing = true : isDrawing = false
+    e.target.style.background = 'red'
+})
+
+sketch.addEventListener('touchmove', e => {
+    e.preventDefault()
+    isDrawing == false ? isDrawing = true : isDrawing = false
+    e.target.style.background = 'red'
+})
+
+const draw = (e) => {
     if (isDrawing === true) {
         e.target.style.background = 'red'
-    }    
-})
+    }
+}
+sketch.addEventListener('mouseout', draw)     
